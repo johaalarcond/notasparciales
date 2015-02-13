@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="listaCursosForm" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="opcion" type="java.lang.String" />
+			<form-property name="boton" type="java.lang.String" />
+		</form-bean>
+
+		<form-bean name="actualizarActividadForm"
+			type="co.edu.icesi.notas.form.ActualizarActividadForm" />
+		<form-bean name="estructuraAdministradorForm"
+			type="co.edu.icesi.notas.form.EstructuraAdministradorForm" />
+		<form-bean name="calificacionForm" type="co.edu.icesi.notas.form.CalificacionForm" />
+		<form-bean name="guardarNotasForm" type="co.edu.icesi.notas.form.CalificacionForm" />
+		<form-bean name="copiarEsquemaForm" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="copia" type="java.lang.String" />
+		</form-bean>
+		<form-bean name="cerrarForm" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="opcion" type="java.lang.String" />
+			<form-property name="cerrar" type="java.lang.String" />
+			<form-property name="habilitar" type="java.lang.String" />
+			<form-property name="pagina" type="java.lang.String" />
+		</form-bean>
+                 <form-bean name="reabrirForm" type="org.apache.struts.action.DynaActionForm">
+                </form-bean>
+                <!-- ffceballos -->
+		<form-bean name="configuracionInicialForm" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="opcion" type="java.lang.String" />
+		</form-bean>
+                
+                <form-bean name="clonarEsquemaForm" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="opcion" type="java.lang.String" />
+		</form-bean>
+                
+                <!-- ffceballos -->
+                <form-bean name="configuracionInicialCoordinadorForm" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="opcion" type="java.lang.String" />
+		</form-bean>
+		<form-bean name="configuracionForm" type="co.edu.icesi.notas.form.ConfiguracionForm" />
+		<form-bean name="cursosEstudianteForm" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="boton" type="java.lang.String" />
+			<form-property name="opcion" type="java.lang.String" />
+		</form-bean>
+		<form-bean name="cursosDeptoForm" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="boton" type="java.lang.String" />
+			<form-property name="opcion" type="java.lang.String" />
+			<form-property name="criterio" type="java.lang.String" />
+		</form-bean>
+		<form-bean name="modificarEsquemaForm"
+			type="co.edu.icesi.notas.form.ModificarEsquemaForm" />
+		<form-bean name="modificarPorcentajesForm"
+			type="co.edu.icesi.notas.form.ModificarPorcentajesForm" />
+		<form-bean name="registroAsistenciasForm"
+			type="co.edu.icesi.notas.form.RegistroAsistenciasForm" />
+		<form-bean name="controlAsistenciaForm" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="controlAsistencia" type="java.lang.String" />
+			<form-property name="escala" type="java.lang.String" />
+		</form-bean>
+
+ <!-- jalarcon -->
+		<form-bean name="controlAsistenciaForm" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="controlAsistencia" type="java.lang.String" />
+			<form-property name="escala" type="java.lang.String" />                        
+                        <form-property name="reglaMatematicas" type="java.lang.String" />
+                        <form-property name="reglaQuiz" type="java.lang.String" />
+                       
+		</form-bean>
+ <!-- jalarcon -->
+
+		<form-bean name="configurarEsquemaForm" type="org.apache.struts.action.DynaActionForm">
+		<!-- ffceballos --><form-property name="opcionEsquema" type="java.lang.String" initial="B"/><!-- ffceballos -->
+		</form-bean>
+
+		<form-bean name="copiarEsquemaAnteriorForm" type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="busquedaForm" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="estudiante" type="java.lang.String" />
+		</form-bean>
+
+		<form-bean name="notificacionForm" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="datos" type="java.lang.String" />
+		</form-bean>
+
+	</form-beans>
+
+	<global-forwards>
+		<forward name="errorAplicacion" path="/error.jsp" />
+		<forward name="aError" path="/profesores/error.jsp" />
+		<forward name="aErrorEstud" path="/estudiantes/errorEstud.jsp" />
+		<forward name="aErrorJefe" path="/jefes/error.jsp" />
+		<forward name="aErrorSegestud" path="/segestud/error.jsp" />
+		<forward name="sesionInactiva" path="/sesionInactiva.icesi" />
+	</global-forwards>
+
+	<action-mappings>
+		<action path="/inicio" type="co.edu.icesi.notas.action.InicioAction"
+			validate="false">
+			<forward name="exito" path="/profesores/listaCurso.jsp" />
+		</action>
+
+		<action attribute="listaCursosForm" input="/profesores/listaCurso.jsp"
+			name="listaCursosForm" path="/listaCursos" scope="request"
+			type="co.edu.icesi.notas.action.ListaCursosAction">
+			<forward name="definitivas" path="/basica/definitivas.jsp" />
+			<forward name="config_ini" path="/profesores/inicial.jsp" />
+			<forward name="configuracion" path="/basica/esquema.jsp" />
+			<forward name="registrar" path="/basica/registro.jsp" />
+		</action>
+                
+                <!-- ffceballos-->
+                
+                
+                <action attribute="listaCursosForm" input="/coordinadores/index.jsp"
+			name="listaCursosForm" path="/listaCursos" scope="request"
+			type="co.edu.icesi.notas.action.ListaCursosAction">
+			<forward name="definitivas" path="/basica/definitivas.jsp" />
+			<forward name="config_ini" path="/profesores/inicial.jsp" />
+			<forward name="configuracion" path="/basica/esquema.jsp" />
+			<forward name="registrar" path="/basica/registro.jsp" />
+		</action>
+                
+                <!-- ffceballos -->
+
+		<action attribute="configuracionInicialForm" input="/profesores/inicial.jsp"
+			name="configuracionInicialForm" path="/configuracionInicial"
+			type="co.edu.icesi.notas.action.ConfiguracionInicialAction" validate="false">
+			<forward name="continuacion" path="/basica/ingresaActividad.jsp" />
+			<forward name="confEsquema" path="/profesores/seleccionEsquema.jsp" />
+			<forward name="cancelar" path="/volverInicio.icesi" />
+			<forward name="copiar" path="/irCopiaEsquemaAnterior.icesi" />
+			<forward name="error" path="/profesores/inicial.jsp" />
+		</action>
+                
+                <!-- ffceballos-->
+                <action attribute="configuracionInicialCoordinadorForm" input="/coordinadores/inicial.jsp"
+			name="configuracionInicialCoordinadorForm" path="/configuracionInicialCoordinador"
+			type="co.edu.icesi.coordinadores.action.ConfiguracionInicialCoordinadorAction" validate="false">
+			<forward name="continuacion" path="/coordinadores/ingresaActividad.jsp" />
+			
+			<forward name="cancelar" path="/volverInicio.icesi" />
+			<forward name="copiar" path="/irCopiaEsquemaAnterior.icesi" />
+			<forward name="error" path="/profesores/inicial.jsp" />
+		</action>
+                <!-- ffceballos-->
+
+		<action attribute="configurarEsquemaForm" input="/profesores/seleccionEsquema.jsp"
+			name="configurarEsquemaForm" path="/configuracionEsquema" scope="request"
+			type="co.edu.icesi.notas.action.ConfiguracionEsquemaAction">
+			<forward name="cancelar" path="/profesores/inicial.jsp" />
+			<forward name="continuar" path="/basica/ingresaActividad.jsp" />
+		</action>
+
+		<action path="/irCopiaEsquemaAnterior"
+			type="co.edu.icesi.notas.action.IrCopiaEsquemaAnteriorAction">
+			<forward name="exito" path="/basica/copiaEsquemaAnterior.jsp" />
+			<forward name="regresar" path="/profesores/inicial.jsp" />
+		</action>
+
+                <!--ffceballos-->
+                
+		<action attribute="clonarEsquemaForm" input="/basica/esquema.jsp"
+			name="clonarEsquemaForm" path="/clonarEsquema" scope="request"
+			type="co.edu.icesi.notas.action.ClonarEsquemaAction"
+                        validate="false">
+                        <forward name="siguiente" path="/basica/esquema.jsp" />	
+                        <forward name="regresar" path="/profesores/inicial.jsp" />
+                        <forward name="seleccionar" path="/profesores/seleccion_grupos.jsp" />
+                        <forward name="inicio" path="/" />		
+		</action>
+                
+                <!--fin ffceballos-->
+
+		<action attribute="copiarEsquemaAnteriorForm" input="/basica/copiaEsquemaAnterior.jsp"
+			name="copiarEsquemaAnteriorForm" path="/copiarEsquemaAnterior" scope="request"
+			type="co.edu.icesi.notas.action.CopiarEsquemaAnteriorAction"
+			validate="false">
+			<forward name="siguiente" path="/basica/esquema.jsp" />
+			<forward name="regresar" path="/profesores/inicial.jsp" />
+		</action>
+
+		<action attribute="modificarEsquemaForm" input="/basica/ingresaActividad.jsp"
+			name="modificarEsquemaForm" path="/modificarEsquema" scope="request"
+			type="co.edu.icesi.notas.action.ModificarEsquemaAction">
+			<forward name="inicial" path="/profesores/inicial.jsp" />
+			<forward name="seguirBasico" path="/basica/modificarPorcentaje.jsp" />
+			<forward name="seleccion" path="/profesores/seleccionEsquema.jsp" />
+			<forward name="regresa" path="/basica/ingresaActividad.jsp" />
+			<forward name="seguirIntermedio" path="/intermedio/modificarPorcentaje.jsp" />
+			<forward name="esquema" path="/basica/esquema.jsp" />
+		</action>
+                
+                
+                <!-- ffceballos 
+                <action attribute="modificarEsquemaForm" input="/coordinadores/ingresaActividad.jsp"
+			name="modificarEsquemaForm" path="/modificarEsquema" scope="request"
+			type="co.edu.icesi.notas.action.ModificarEsquemaCoordinadorAction">
+                                        
+			<forward name="inicial" path="/profesores/inicial.jsp" />
+			<forward name="seguirBasico" path="/basica/modificarPorcentaje.jsp" />
+			<forward name="seleccion" path="/profesores/seleccionEsquema.jsp" />
+			<forward name="regresa" path="/basica/ingresaActividad.jsp" />
+			<forward name="seguirIntermedio" path="/intermedio/modificarPorcentaje.jsp" />
+			<forward name="esquema" path="/basica/esquema.jsp" />
+		</action>
+                 fin ffceballos -->
+                
+
+		<action attribute="modificarPorcentajesForm" input="/basica/modificarPorcentaje.jsp"
+			name="modificarPorcentajesForm" path="/modificarPorcentajes" scope="request"
+			type="co.edu.icesi.notas.action.ModificarPorcentajesAction">
+			<forward name="continuarRedistBasico" path="/basica/modificarPorcentaje.jsp" />
+			<forward name="continuarRedistIntermedio" path="/intermedio/modificarPorcentaje.jsp" />
+			<forward name="modificacion" path="/modificarActividad.icesi" />
+			<forward name="anterior" path="/regresarIngreso.icesi" />
+			<forward name="exito" path="/basica/esquema.jsp" />
+			<forward name="fracasoIntermedio" path="/intermedio/modificarPorcentaje.jsp" />
+			<forward name="fracasoBasico" path="/basica/modificarPorcentaje.jsp" />
+		</action>
+
+		<action path="/volverInicio" type="co.edu.icesi.notas.action.VolverInicioAction"
+			validate="false">
+			<forward name="exito" path="/profesores/listaCurso.jsp" />
+		</action>
+
+		<action forward="/basica/esquema.jsp" path="/aEsquemaBasico" />
+
+		<action forward="/basica/registro.jsp" path="/aRegistroBasico" />
+
+		<action forward="/basica/definitivas.jsp" path="/aDefinitivasBasico" />
+
+		<action path="/xlsBasico" type="co.edu.icesi.notas.action.ArchivoXLSBasicoAction"
+			validate="false">
+			<forward name="definitivasBasico" path="/basica/definitivas.jsp" />
+			<forward name="registroBasico" path="/basica/registro.jsp" />
+			<forward name="esquemaBasico" path="/basica/esquema.jsp" />
+		</action>
+
+		<action path="/regresarIngreso" type="co.edu.icesi.notas.action.RegresarIngresoAction">
+			<forward name="exito" path="/basica/ingresaActividad.jsp" />
+		</action>
+
+		<action path="/regresarPorcentajes"
+			type="co.edu.icesi.notas.action.RegresarPorcentajesAction">
+			<forward name="exitoBasico" path="/basica/modificarPorcentaje.jsp" />
+			<forward name="exitoIntermedio" path="/intermedio/modificarPorcentaje.jsp" />
+		</action>
+
+		<action input="/profesores/registroAsistencias.jsp" attribute="registroAsistenciasForm"
+			name="registroAsistenciasForm" path="/registroAsistencias"
+			type="co.edu.icesi.notas.action.RegistroAsistenciasAction" validate="true">
+			<forward name="continue" path="/profesores/registroAsistencias.jsp" />
+		</action>
+
+		<action input="/profesores/registroAsistencias.jsp" attribute="registroAsistenciasForm"
+			name="registroAsistenciasForm" path="/guardarAsistencias"
+			type="co.edu.icesi.notas.action.GuardarAsistenciasAction" validate="true">
+			<forward name="continue" path="/profesores/registroAsistencias.jsp" />
+			<forward name="cancel" path="/basica/esquema.jsp" />
+		</action>
+
+		<action forward="/profesores/consolidadoAsistencias.jsp" path="/aConsolidadoAsistencias" />
+		
+		<action attribute="notificacionForm" input="/profesores/consolidadoAsistencias.jsp"
+			name="notificacionForm" path="/notificarEstudiante" scope="request"
+			type="co.edu.icesi.notas.action.NotificarEstudianteAction">
+			<forward name="continuar" path="/profesores/consolidadoAsistencias.jsp" />
+		</action>
+		
+		<action attribute="controlAsistenciaForm" name="controlAsistenciaForm"
+			path="/controlAsistencia" scope="request"
+			type="co.edu.icesi.notas.action.ControlAsistenciaAction" validate="false">
+			<forward name="continuar" path="/basica/esquema.jsp" />
+			<forward name="error" path="/basica/esquema.jsp" />
+		</action>
+
+		<action attribute="calificacionForm" name="calificacionForm"
+			path="/calificacion" scope="request"
+			type="co.edu.icesi.notas.action.CalificacionAction">
+			<forward name="continuar" path="/profesores/calificaciones.jsp" />
+			<forward name="continuarEstud" path="/estudiantes/calificacionesEstud.jsp" />
+			<forward name="continuarBasico" path="/basica/calificaciones.jsp" />
+		</action>
+
+		<action attribute="calificacionForm" name="calificacionForm"
+			input="/profesores/calificaciones.jsp" path="/guardarNotas" scope="request"
+			type="co.edu.icesi.notas.action.GuardarNotasAction" validate="false">
+			<forward name="fracaso" path="/basica/calificaciones.jsp" />
+			<forward name="continuar" path="/basica/registro.jsp" />
+			<forward name="fracasoBasico" path="/basica/calificaciones.jsp" />
+			<forward name="continuarBasico" path="/basica/calificaciones.jsp" />
+			<forward name="cancelaBasico" path="/basica/registro.jsp" />
+		</action>
+
+		<action attribute="cerrarForm" name="cerrarForm" path="/cerrarCurso"
+			scope="request" type="co.edu.icesi.notas.action.CerrarCursoAction">
+			<forward name="IrRegistro" path="/basica/registro.jsp" />
+			<forward name="IrEsquema" path="/basica/esquema.jsp" />
+			<forward name="IrDefinitiva" path="/basica/definitivas.jsp" />
+			<forward name="IrCierre" path="/profesores/cierreCurso.jsp" />
+		</action>
+               <action name="reabrirForm" path="/reabrirCurso" scope="request" type="co.edu.icesi.notas.action.ReabrirCursoAction">
+                <forward name="IrDefinitivas" path="/basica/definitivas.jsp" />
+                </action>
+                
+		<action path="/modificarActividad"
+			type="co.edu.icesi.notas.action.ModificarActividadAction">
+			<forward name="exito" path="/basica/modificarActividad.jsp" />
+		</action>
+                
+               
+		<action attribute="actualizarActividadForm" input="/basica/modificarActividad.jsp"
+			name="actualizarActividadForm" path="/actualizarActividad" scope="request"
+			type="co.edu.icesi.notas.action.ActualizarActividadAction">
+			<forward name="esquema" path="/basica/esquema.jsp" />
+			<forward name="porcentajeBasico" path="/regresarPorcentajes.icesi" />
+			<forward name="porcentajeIntermedio" path="/regresarPorcentajes.icesi" />
+			<forward name="error" path="/basica/modificarActividad.jsp" />
+			<forward name="regresoEstud" path="/basicaEstud/esquemaEstud.jsp" />
+		</action>
+
+
+		<action path="/inicioEstud"
+			type="co.edu.icesi.notas.estudiante.action.InicioEstudianteAction"
+			validate="false">
+			<forward name="continuar" path="/estudiantes/cursos.jsp" />
+		</action>
+
+		<action attribute="cursosEstudianteForm" name="cursosEstudianteForm"
+			path="/cursosEstud" scope="request" input="/estudiantes/cursos.jsp"
+			type="co.edu.icesi.notas.estudiante.action.CursoEstudianteAction"
+			validate="false">
+			<forward name="esquema" path="/basicaEstud/esquemaEstud.jsp" />
+			<forward name="notas" path="/estudiantes/notasEstud.jsp" />
+			<forward name="definitivas" path="/basicaEstud/definitivasEstud.jsp" />
+			<forward name="fracaso" path="/estudiantes/cursos.jsp" />
+		</action>
+
+		<action forward="/estudiantes/cursos.jsp" path="/aCursos" />
+
+		<action forward="/basicaEstud/esquemaEstud.jsp" path="/aEsquemaEstud" />
+
+		<action forward="/estudiantes/notasEstud.jsp" path="/aNotasEstud" />
+
+		<action forward="/basicaEstud/definitivasEstud.jsp" path="/aDefinitivasEstud" />
+
+		<action path="/mostrarActividadEstud"
+			type="co.edu.icesi.notas.estudiante.action.MostrarActividadAction"
+			validate="false">
+			<forward name="continuar" path="/basicaEstud/esquemaEstud.jsp" />
+		</action>
+
+
+		<action path="/jefes/inicioJefe" type="co.edu.icesi.notas.jefes.action.InicioJefeAction"
+			validate="false">
+			<forward name="continuar" path="/jefes/cursosDepto.jsp" />
+			<forward name="error" path="/jefes/error.jsp" />
+		</action>
+
+		<action attribute="cursosDeptoForm" name="cursosDeptoForm"
+			path="/jefes/cursosDepto" scope="request"
+			type="co.edu.icesi.notas.jefes.action.CursosDeptoAction">
+			<forward name="esquema" path="/jefes/esquemaJefe.jsp" />
+			<forward name="definitivas" path="/jefes/definitivasJefe.jsp" />
+			<forward name="fracaso" path="/jefes/cursosDepto.jsp" />
+		</action>
+
+		<action path="/jefes/mostrarActividadJefe"
+			type="co.edu.icesi.notas.jefes.action.MostrarActividadAction"
+			validate="false">
+			<forward name="continuar" path="/jefes/esquemaJefe.jsp" />
+		</action>
+
+		<action attribute="cursosDeptoForm" input="/jefes/cursosDepto.jsp"
+			name="cursosDeptoForm" path="/jefes/busquedaCursos" scope="request"
+			type="co.edu.icesi.notas.jefes.action.BusquedaCursosAction">
+			<forward name="continuar" path="/jefes/cursosDepto.jsp" />
+		</action>
+                
+                <!--ffceballos -->
+                <action attribute="cursosDeptoForm" input="/coordinadores/index.jsp"
+			name="cursosDeptoForm" path="/coordinadores/busquedaCursos" scope="request"
+			type="co.edu.icesi.coordinadores.action.BusquedaCursosCoordinAction">
+			<forward name="continuar" path="/coordinadores/index.jsp" />
+                        <forward name="config_ini" path="/coordinadores/inicial.jsp" />
+			<forward name="configuracion" path="/basica/esquema.jsp" />
+		</action>
+                <!--fin ffceballos -->
+                
+		<action forward="/jefes/cursosDepto.jsp" path="/jefes/aCursosJefe" />
+
+		<action forward="/jefes/esquemaJefe.jsp" path="/jefes/aEsquemaJefe" />
+
+		<action forward="/jefes/notasJefe.jsp" path="/jefes/aNotasJefe" />
+
+		<action forward="/jefes/definitivasJefe.jsp" path="/jefes/aDefinitivasJefe" />
+
+		<action path="/segestud/inicioSegestud"
+			type="co.edu.icesi.notas.segestud.action.InicioSegestudAction"
+			validate="false">
+			<forward name="exito" path="/segestud/busqueda.jsp" />
+			<forward name="error" path="/segestud/error.jsp" />
+		</action>
+
+		<action attribute="busquedaForm" input="/segestud/busqueda.jsp"
+			name="busquedaForm" path="/segestud/busquedaSegestud"
+			type="co.edu.icesi.notas.segestud.action.BusquedaAction" validate="false">
+			<forward name="continuar" path="/segestud/busqueda.jsp" />
+			<forward name="error" path="/segestud/error.jsp" />
+		</action>
+
+		<action forward="/errorSesion.jsp" path="/sesionInactiva" />
+
+	</action-mappings>
+
+	<message-resources parameter="co.edu.icesi.notas.ApplicationResources" />
+
+</struts-config>
+

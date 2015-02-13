@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <description>Aplicación web para registro de notas parciales</description>
+    <display-name>Notas parciales</display-name>
+    <servlet>
+        <description>Struts action servlet</description>
+        <servlet-name>action</servlet-name>
+        <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+        <init-param>
+            <description>Struts config file</description>
+            <param-name>config</param-name>
+            <param-value>/WEB-INF/struts-config.xml</param-value>
+        </init-param>
+        <init-param>
+            <description>Struts debug value</description>
+            <param-name>debug</param-name>
+            <param-value>3</param-value>
+        </init-param>
+        <init-param>
+            <description>Struts detail value</description>
+            <param-name>detail</param-name>
+            <param-value>3</param-value>
+        </init-param>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>action</servlet-name>
+        <url-pattern>*.icesi</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>15</session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+  <login-config>	
+<auth-method>FORM</auth-method>
+	<form-login-config>
+		<form-login-page>/login.jsp</form-login-page>
+		<form-error-page>/error.jsp</form-error-page>
+	</form-login-config>
+  </login-config>
+    <security-constraint>
+        <display-name>Authorized users constraint</display-name>
+        <web-resource-collection>
+            <web-resource-name>protected</web-resource-name>
+            <description>Protected resources</description>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description>Authenticated users</description>
+            <role-name>AUTHENTICATED_USERS</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-role>
+        <description>Authenticated users</description>
+        <role-name>AUTHENTICATED_USERS</role-name>
+    </security-role>
+    <resource-ref>
+        <description>Websiaepre datasource</description>
+        <res-ref-name>jdbc/ds_websiaepre</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+        <res-sharing-scope>Unshareable</res-sharing-scope>
+    </resource-ref>
+</web-app>

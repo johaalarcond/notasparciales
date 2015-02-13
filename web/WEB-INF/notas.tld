@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+"http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+ 
+<taglib>
+<tlibversion>1.0</tlibversion>
+<jspversion>1.1</jspversion>
+<shortname>notas</shortname>  
+<info>Libreria de tags para notasparciales</info> 
+
+<tag>
+	<name>esquema</name>
+	<tagclass>co.edu.icesi.notas.tags.TagEsquema</tagclass>
+	<bodycontent>empty</bodycontent>
+	
+	<attribute>
+		<name>padre</name>
+		<required>true</required>
+	</attribute>
+	
+	<attribute>
+		<name>estructura</name>
+		<required>true</required>
+	</attribute>
+	
+	<attribute>
+		<name>estudiante</name>
+		<required>false</required>
+	</attribute>
+	<!--
+		El atributo estudiante es empleado para distinguir cuando el tag
+		es invocado desde una pagina del modulo de estudiantes.
+		-->
+</tag>
+
+<tag>
+	<name>registro</name>
+	<tagclass>co.edu.icesi.notas.tags.TagRegistroNota</tagclass>
+	<bodycontent>empty</bodycontent>
+	
+	<attribute>
+		<name>padre</name>
+		<required>true</required>
+	</attribute>
+	
+	<attribute>
+		<name>estructura</name>
+		<required>true</required>
+	</attribute>
+	
+	<attribute>
+		<name>estudiante</name>
+		<required>false</required>
+	</attribute>
+</tag>
+
+<tag>
+	<name>definitivas</name>
+	<tagclass>co.edu.icesi.notas.tags.TagResumenTotal</tagclass> 
+	<bodycontent>empty</bodycontent>
+	<attribute>
+		<name>estudiante</name>
+		<required>false</required>
+	</attribute>
+</tag>
+
+<tag>
+	<name>resumen</name>
+	<tagclass>co.edu.icesi.notas.tags.TagResumenEsquema</tagclass>
+	<bodycontent>empty</bodycontent>
+	<attribute>
+		<name>estudiante</name>
+		<required>false</required>
+	</attribute>
+	<attribute>
+		<name>jefe</name>
+		<required>false</required>
+	</attribute>
+</tag>
+
+<tag>
+	<name>registroBasico</name>
+	<tagclass>co.edu.icesi.notas.tags.TagNotaBasica</tagclass> 
+	<bodycontent>empty</bodycontent>
+	<attribute>
+		<name>estudiante</name>
+		<required>false</required>
+	</attribute>
+</tag>
+
+<tag>
+	<name>definitivasBasico</name>
+	<tagclass>co.edu.icesi.notas.tags.TagDefinitivasBasico</tagclass> 
+	<bodycontent>empty</bodycontent>
+	<attribute>
+		<name>estudiante</name>
+		<required>false</required>
+	</attribute>
+</tag>
+
+<tag>
+	<name>asistencias</name>
+	<tagclass>co.edu.icesi.notas.tags.TagConsolidadoAsistencias</tagclass> 
+	<bodycontent>empty</bodycontent>
+</tag>
+
+<tag>
+	<name>copias</name>
+	<tagclass>co.edu.icesi.notas.tags.TagCopiaEsquemaAnterior</tagclass> 
+	<bodycontent>empty</bodycontent>
+</tag>
+
+</taglib> 

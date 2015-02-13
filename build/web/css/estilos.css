@@ -1,0 +1,499 @@
+/*nombre y codigo de los estudiantes*/
+.nombre{
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+color:black;
+}
+.etiqueta{
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+color:black;
+}
+.info{
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+color:black;
+}
+.programacion{
+font-weight:bold;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:9px;
+color:#003399;
+}
+.titulo2{
+font-weight:bold;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:13px;
+color:black;
+}
+.error{
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#990000;
+}
+.celda2{
+padding:4px;
+border-color: #ccc;
+border-width: 1px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:13px;
+background-position: center center;
+color:#003399;/*#933;*/
+font-weight: bold;
+}
+
+.check100{
+padding:4px;
+border-color: #ccc;
+border-width: 1px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:9px;
+background-position: center center;
+color:#003399;/*#933;*/
+}
+
+.celdaProg{
+padding:4px;
+border-color: #ccc;
+border-width: 1px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:9px;
+background-position: center center;
+color:#003399;/*#933;*/
+font-weight: bold;
+}
+
+.celda3{
+padding:4px;
+border-color: #ccc;
+border-width: 1px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+background-position: center center;
+color:#003399;/*#933;*/
+}
+
+.celda4{
+padding:4px;
+border-color: #ccc;
+border-width: 1px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+background-position: center center;
+color:#990000;
+font-weight: bold;
+}
+.celda{
+padding:4px;
+border-color: #ccc;
+border-width: 1px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+color:black;
+text-transform: capitalize;
+}
+
+.celdaEmpty{
+padding:4px;
+border-color: #FFFFFF;
+border-width: 1px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+background-position: center center;
+color:#003399;/*#933;*/
+font-weight: bold;
+}
+
+.deshabilitado{
+padding:4px;
+border-color: #ccc;
+border-width: 1px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+color:gray;
+text-transform: capitalize;
+}
+
+.deshabilitado2{
+padding:4px;
+border-color: #ccc;
+border-width: 1px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+color:gray;
+text-transform: capitalize;
+font-weight:bold;
+}
+
+.links{
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+color:black;
+font-weight: bold;
+}
+
+.linksExtra{
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#3399CC;
+font-weight: bold;
+}
+
+.curso{
+font-weight:bold;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:16px;
+color:#000066;/* antiguo color #650A43 */
+}
+.resaltado{
+padding:4px;
+border-color: #ccc;
+border-width: 1px;
+font-weight:bold;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+color:black;
+}
+.tabla{
+border: 1px solid black;
+}
+
+.tabla2{
+border: 1px solid black;
+}
+
+.celdaResaltada{
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-top: 1px solid black
+}
+
+.celdaResaltadaTitulo{
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-top: 1px solid black;
+	font-weight:bold;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:black
+}
+
+.campoError{
+	border-color: red;
+	border-style: solid double;
+	border-width: 1px;
+}
+
+/*Los siguientes estilos se emplean en las páginas de modificarPorcentajes.jsp*/
+
+.filaClasif1 {
+	border-bottom: 1px solid #000000;
+	padding:4px;
+	background-color: #EBEBEB;
+}
+.filaClasif3 {
+	padding:4px;
+	background-color: #EBEBEB;
+}
+
+.filaClasif2 {
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	padding:4px;
+	background-color: #EBEBEB;
+}
+.filaClasif4 {
+	border-top: 1px solid #000000;
+	padding:4px;
+	background-color: #EBEBEB;
+}
+
+.celda9{
+/*padding:4px;
+border-color: #ccc;
+border-width: 1px;*/
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:13px;
+background-position: center center;
+color:#003399;/*#933;*/
+font-weight: bold;
+}
+.titulo3{
+font-weight:bold;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:13px;
+color:black;
+padding:4px;
+border-left: 1px solid black;
+border-bottom: 1px solid black;
+border-top: 1px solid black;
+}
+.titulo4{
+font-weight:bold;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:13px;
+color:black;
+padding:4px;
+border-right: 1px solid black;
+border-left: 1px solid black;
+border-top: 1px solid black;
+}
+.titulo5{
+padding:4px;
+border-top: 1px solid black;
+}
+
+.titulo6{
+font-weight:bold;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:13px;
+color:black;
+padding:4px;
+border-bottom: 1px solid black;
+border-top: 1px solid black;
+}
+
+.titulo7{
+font-weight:bold;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:13px;
+color:black;
+padding:4px;
+border-bottom: 1px solid black;
+}
+
+.titulo8{
+font-weight:bold;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:13px;
+color:black;
+padding:4px;
+border-right: 1px solid black;
+border-left: 1px solid black;
+}
+
+.titulo9{
+padding:4px;
+}
+
+.celda7{
+padding:4px;
+/*border-color: #ccc;
+border-width: 1px;*/
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+color:black;
+text-transform: capitalize;
+border-top: 1px solid black;
+border-left: 1px solid black;
+border-right: 1px solid black;
+}
+.celda8{
+padding:4px;
+/*border-color: #ccc;
+border-width: 1px;*/
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+color:black;
+text-transform: capitalize;
+border-top: 1px solid black;
+}
+
+.celdaVacia{
+	border-left: 1px solid black;
+}
+
+
+/*Fin de los estilos de las páginas modificarPorcentajes.jsp*/
+
+/*CSS for Bubble Tooltips by Alessandro Fulciniti
+- http://pro.html.it - http://web-graphics.com */
+
+.tooltip{
+width: 200px; color:#000;
+font:lighter 11px/1.3 Arial,sans-serif;
+text-decoration:none;text-align:center}
+
+.tooltip span.top{padding: 30px 8px 0;
+    background: url(bt.gif) no-repeat top}
+
+.tooltip b.bottom{padding:3px 8px 15px;color: #548912;
+    background: url(bt.gif) no-repeat bottom}
+
+fieldset{
+	width:50%;
+     min-width:0px;
+     max-width:400px;
+     background:#eee;
+     border:1px solid #c00;
+     padding:5px;
+ }
+
+#contn {
+	color:#000000;
+	font-family:verdana;
+	font-size:12px;
+}
+/********************Estilos registro de asistencias**********************/
+
+.inputRegAsist {
+	width:30px;
+}
+
+/*******************Estilos consolidado de asistencias********************/
+
+
+/*******************Estilos seguimiento a estudiantes*********************/
+
+#wrapper {
+
+}
+
+.introduccion {
+	width:60%;
+	margin:10px auto;
+	color:#990000;
+	font-family:verdana;
+	font-size:12px;
+	font-weight:bold;
+}
+
+.texto {
+	width:60%;
+	margin:10px 0px 0px 0px;
+	color:#000000;
+	font-family:verdana;
+	font-size:12px;
+}
+
+#div_criterios {
+	display:none;
+}
+
+#div_criterios table {
+	background-position:center center;
+	border-color:#CCCCCC;
+	border-width:1px;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:12px;
+}
+
+.segestud_formulario {
+	width: 80%;
+	margin: 0px 0px 10px 0px;
+}
+
+#segestud_resultado {
+	width:80%;
+	margin:0 auto;
+}
+
+#alumnos {
+	width:80%;
+	margin:0 auto;
+}
+
+#alumnos a {
+	color:#000000;
+	font-family:verdana;
+	font-size:13px;
+	font-weight:bold;
+}
+
+#alumnos div[id^="alumno_"] {
+	display:none;
+}
+
+#alumnos .info_alumno {
+	margin:10px 0px 10px 0px;
+}
+
+#alumnos .info_alumno .cursos_alumno td, th {
+	background-position:center center;
+	border-color:#CCCCCC;
+	border-width:1px;
+	color:#003399;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	padding:4px;
+}
+
+#alumnos .info_alumno .cursos_alumno td {
+	color:black;
+	font-size:12px;
+	text-transform:capitalize;
+}
+
+#alumnos .info_alumno .cursos_alumno .nombre_materia {
+	width:300px;
+}
+
+#resultados {
+	margin: 0px 0px 10px 0px;
+}
+
+
+.tabla {
+	
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+color: #000000;
+text-decoration: none; 
+font-size: 12px;
+padding-left:3em;
+
+
+}
+
+.titulo {
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: left; 
+	padding-left:1em;
+
+}
+
+.barra {
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #993333;
+
+}
+
+.seccion {
+	
+}
+
+/**********************Estilos seguimiento a cursos***********************/
+
+#busqueda {
+	
+}
+
+#form_busqueda_jefes {
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:12px;
+	text-align:center;
+}
+
+/********************************Footer***********************************/
+
+#pie {
+	color:#FFFFFF;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:12px;
+}
+
+#pie a {
+	color:#FFFFFF;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+#pie a:hover {
+	text-decoration:underline;
+}
